@@ -1,0 +1,9 @@
+Name,Phone No,City
+ved,87805,rajkot
+ved,50878,ahmedabad
+hemang,78451,rajkot
+hemang,98652,gandhinagar
+athyan,95862,rajkot
+yenish,94285,rajkot
+namra,92100,rajkot
+hitesh,90812,gandhinagar

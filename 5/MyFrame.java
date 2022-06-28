@@ -1,0 +1,54 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import javax.swing.*;
+import java.lang.*;
+
+public class MyFrame extends Frame
+{
+	TextField t1;
+	Label l1; 
+	Button b1;
+	Font f1;
+	MyActionListener ml;
+
+	MyFrame()
+	{
+		super("Frame 1");
+		setLayout(null);
+		setBounds(0,0,400,500);
+		ml = new MyActionListener(this);
+
+		Font f1 = new Font("Arial",Font.BOLD,30);
+
+		l1 = new Label("Enter Year");
+		l1.setBounds(120,50,200,100);
+		l1.setFont(f1);
+		add(l1);
+
+		t1 = new TextField();
+		t1.setBounds(100,200,200,100);
+		t1.setFont(f1);
+		add(t1);
+
+		b1=new Button("Next");
+		add(b1);
+		b1.setBounds(100,350,200,100);
+		b1.addActionListener(ml);
+
+
+		
+		addWindowListener(new WindowAdapter()
+			{
+				public void windowClosing(WindowEvent we)
+				{
+					System.exit(0);
+				}
+			});
+	}
+	public static void main(String args[])
+	{
+			MyFrame mf = new MyFrame();
+			mf.setVisible(true);
+	}
+}
